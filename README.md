@@ -1,13 +1,13 @@
 # keshna-project0
 
-A c# console application that can :
-place orders to store locations for customers
-add a new customer
-search customers by name
-display details of an order
-display all order history of a store location
-display all order history of a customer
-input validation
-(optional: order history can be sorted by earliest, latest, cheapest, most expensive)
-(optional: get a suggested order for a customer based on his order history)
-(optional: display some statistics based on order history)
+A c# console application that can :<br>
+place orders to store locations for customers<br>
+add a new customer<br>
+search customers by name<br>
+display details of an order<br>
+display all order history of a store location<br>
+display all order history of a customer<br>
+input validation<br>
+(optional: order history can be sorted by earliest, latest, cheapest, most expensive)<br>
+(optional: get a suggested order for a customer based on his order history)<br>
+(optional: display some statistics based on order history)<br>
