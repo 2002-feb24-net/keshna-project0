@@ -5,9 +5,29 @@ namespace CupCakeShop
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        
+        
+
+            //Customers myC = new Customers();
+            //myC.printC();
+            //Menu menu = new Menu();
+            //Console.WriteLine("Hello ! Do you want to order? y/n");
+            //string OrderInput = Console.ReadLine();
+
+            //if(OrderInput == "y")
+            //{
+            //    menu.printMenu();
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("put some method here");
+            //}
+           
+            
+
+       
+
+      
     }
 }
