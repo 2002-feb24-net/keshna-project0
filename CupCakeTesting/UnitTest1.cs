@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace CupCakeXUnitTest
+namespace CupCakeTesting
 {
     public class UnitTest1
     {

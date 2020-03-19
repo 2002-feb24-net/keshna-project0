@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CupCakeShop"
+    "\\CupCake",
+    "\\CupCakeLib",
+    "\\CupCakeLib\\Models",
+    "\\CupCakeTesting"
   ],
-  "SelectedNode": "\\CupCakeShop\\Customers.cs",
+  "SelectedNode": "\\CupCakeLib",
   "PreviewInSolutionExplorer": true
 }

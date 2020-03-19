@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace CupCakeShop
+namespace CupCake
 {
-    class Store
+    class Orders
     {
     }
 }

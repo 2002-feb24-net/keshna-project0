@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CupCakeLibrary
+namespace CupCakeLib
 {
     public class Class1
     {

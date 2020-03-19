@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CupCakeShop
+namespace CupCake
 {
     class Menu
     {
