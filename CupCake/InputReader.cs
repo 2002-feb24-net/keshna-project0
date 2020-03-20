@@ -5,13 +5,13 @@ namespace CupCake
 {
      internal enum InputReader
     {
-        PlaceOrder = 0,
+        PlaceOrder = 7,
         AddCustomer = 1,
-        SearchCustomer = 2,
-        DisplayDetailsOfOrder = 3,
-        DisplayOrderHistoryOfLocation = 4,
-        DisplayOrderHistoryOfCustomer = 5,
-        DisplayAllLocations = 6,
-        Exit = 7
+        SearchCustomer = 0,
+        DisplayDetailsOfOrder = 2,
+        DisplayOrderHistoryOfLocation = 3,
+        DisplayOrderHistoryOfCustomer = 4,
+        DisplayAllLocations = 5,
+        Exit = 1
     }
 }

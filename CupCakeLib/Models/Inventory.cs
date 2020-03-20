@@ -4,7 +4,8 @@ using System.Text;
 
 namespace CupCake
 {
-    class Menu
+    // optional. Dont think inventory is required
+    class Inventory
     {
         public int InventoryId { get; set; }
         public int StoreId { get; set; }

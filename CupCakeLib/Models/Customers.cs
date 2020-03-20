@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace CupCakeLib.Models
@@ -28,7 +29,7 @@ namespace CupCakeLib.Models
                 {
                     // good practice to provide useful messages when throwing exceptions,
                     // as well as the name of the relevant parameter if applicable.
-                    throw new FormatException("Name must not be empty.", nameof(value));
+                    throw new FormatException("Name must not be empty.");
                 }
                 _name = value;
             }

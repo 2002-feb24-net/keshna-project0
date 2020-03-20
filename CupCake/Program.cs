@@ -18,9 +18,24 @@ namespace CupCake
             {
                 try
                 {
-                    Menu.DisplayMenu();
-                    InputReader req = Menu.PromptUser();
-                    ShowMenu.HandleRequest(req);
+                    Console.WriteLine("\n~~~~ Welcome to the CupCake ~~~~\n");
+                    Console.WriteLine("Are you a customer (c) or manager (m)?\n");
+                    string level = Console.ReadLine();
+                    if (level == "c")
+                    {
+                        Menu.DisplayCMenu();
+                        InputReader req = Menu.PromptUser();
+                        ShowMenu.HandleRequest(req);
+                    }
+                    else if(level == "m")
+                    {
+
+                        Menu.DisplayMMenu();
+                        InputReader req = Menu.PromptUser();
+                        ShowMenu.HandleRequest(req);
+                    }
+
+                   
                 }
                 catch (Exception ex)
                 {
