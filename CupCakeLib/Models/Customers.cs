@@ -11,7 +11,7 @@ namespace CupCakeLib.Models
         /// <summary>
         /// The customer's ID. Zero indicates a missing value.
         /// </summary>
-        public int Id { get; set; }
+        public int customerId { get; set; }
 
         /// <summary>
         /// The customer's name. Must not be empty.
@@ -28,11 +28,13 @@ namespace CupCakeLib.Models
                 {
                     // good practice to provide useful messages when throwing exceptions,
                     // as well as the name of the relevant parameter if applicable.
-                    throw new ArgumentException("Name must not be empty.", nameof(value));
+                    throw new FormatException("Name must not be empty.", nameof(value));
                 }
                 _name = value;
             }
         }
-       
+         public string ZipCode { get; set; }
+
+        public int password { get; set; }
     }
 }

@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\CupCake",
-    "\\CupCakeLib",
-    "\\CupCakeLib\\Models",
     "\\CupCakeTesting"
   ],
-  "SelectedNode": "\\CupCakeLib",
+  "SelectedNode": "\\CupCake\\CupCake.sln",
   "PreviewInSolutionExplorer": true
 }
