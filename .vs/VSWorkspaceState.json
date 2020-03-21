@@ -3,8 +3,9 @@
     "",
     "\\CupCake",
     "\\CupCakeData",
+    "\\CupCakeLib",
     "\\CupCakeTesting"
   ],
-  "SelectedNode": "\\CupCake\\CupCake.sln",
+  "SelectedNode": "\\CupCakeData\\CupCakeData.sln",
   "PreviewInSolutionExplorer": true
 }

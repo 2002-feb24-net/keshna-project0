@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CupCakeData.Model
+namespace CupCake.Model
 {
     public partial class OrderProduct
     {
