@@ -22,7 +22,7 @@ namespace CupCakeLib.Models
         /// <summary>
         /// The customer's name. Must not be empty.
         /// </summary>
-        public string Name
+        public string CName
         {
             // expression-body syntax for accessing the backing field.
             // equivalent to "get { return _name; }"
@@ -46,5 +46,9 @@ namespace CupCakeLib.Models
             }
         }
 
+        public void DisplayCust()
+        {
+            Console.WriteLine("ID: " + ID + ", Name: " + CName + ", Phone: " + Phone);
+        }
     }
 }

@@ -1,5 +1,9 @@
 using System;
 using System.Collections.Generic;
+using CupCakeData;
+using CupCakeLib;
+using CupCakeLib.Interface;
+using CupCakeLib.Models;
 
 namespace CupCakeShop
 {
@@ -8,7 +12,8 @@ namespace CupCakeShop
         
         internal static void HandleRequest(InputReader req)
         {
-           
+
+            using IRepo DataRepos = Dependencies.CreateDataRepo();
             if (req.Equals(InputReader.PlaceOrder))
             {
                 HandleRequestPlaceOrder();
@@ -46,6 +51,7 @@ namespace CupCakeShop
                 HandleRequestInvalid();
             }
         }
+
 
         private static void HandleRequestInvalid()
         {
@@ -85,9 +91,10 @@ namespace CupCakeShop
 
         private static void HandleRequestAddCustomer()
         {
+            using IRepo DataRepos = Dependencies.CreateDataRepo();
             Console.WriteLine("Welcome new customer!");
 
-            Console.WriteLine("What is your first and last name?");
+            Console.WriteLine("What is your name?");
 
             var name = Console.ReadLine();
 
@@ -95,18 +102,20 @@ namespace CupCakeShop
 
             var phone = Console.ReadLine();
 
-            //call customer in lib(routes)
-            var cust = new Customer();
-            cust.Names = name;
+            //call customer in lib
+            var cust = new Customers();
+            cust.CName = name;
             cust.Phone = phone;
-            //call customer in data
-            DataRepo.AddCustomer(cust);
-            DataRepo.Save();
+            //call customer in data(route)
+            DataRepos.AddCustomer(cust);
+            DataRepos.SaveChanges();
 
-            Console.WriteLine("You are: ");
+            Console.WriteLine("\nThank you. Your data is saved. \n You are: ");
              cust.DisplayCust();
 
-            Menu.DisplayCMenu();
+            Console.WriteLine("\nHow else can I help you today?\n");
+
+           Menu.DisplayCMenu();
             InputReader req = Menu.PromptUser();
             ShowMenu.HandleRequest(req);
 

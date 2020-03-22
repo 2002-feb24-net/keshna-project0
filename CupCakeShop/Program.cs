@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Security;
-using System.Xml.Serialization;
-//using NLog;
 using CupCakeData;
-using CupCakeLib; 
-
+using CupCakeLib;
+using CupCakeLib.Interface;
+using CupCakeLib.Models;
 namespace CupCakeShop
 {  
         
@@ -21,6 +17,7 @@ namespace CupCakeShop
        
         private static void Main(string[] args)
         {
+            using IRepo DataRepos = Dependencies.CreateDataRepo();
             while (true)
             {
                 try
