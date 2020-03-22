@@ -85,7 +85,31 @@ namespace CupCakeShop
 
         private static void HandleRequestAddCustomer()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Welcome new customer!");
+
+            Console.WriteLine("What is your first and last name?");
+
+            var name = Console.ReadLine();
+
+            Console.WriteLine("What is your phone number?");
+
+            var phone = Console.ReadLine();
+
+            //call customer in lib(routes)
+            var cust = new Customer();
+            cust.Names = name;
+            cust.Phone = phone;
+            //call customer in data
+            DataRepo.AddCustomer(cust);
+            DataRepo.Save();
+
+            Console.WriteLine("You are: ");
+             cust.DisplayCust();
+
+            Menu.DisplayCMenu();
+            InputReader req = Menu.PromptUser();
+            ShowMenu.HandleRequest(req);
+
         }
 
         private static void HandleRequestPlaceOrder()

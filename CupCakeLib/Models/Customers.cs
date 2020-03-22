@@ -5,14 +5,19 @@ namespace CupCakeLib.Models
 {
     public class Customers
     {
+        readonly Validation val = new Validation();
         // backing field for the "Name" property.
         // necessary to define this to be able to add validation to the setter.
         private string _name;
 
+
+        private string _phone { get; set; }
+
+       
         /// <summary>
         /// The customer's ID. Zero indicates a missing value.
         /// </summary>
-        public int customerId { get; set; }
+        public int ID { get; set; }
 
         /// <summary>
         /// The customer's name. Must not be empty.
@@ -24,18 +29,22 @@ namespace CupCakeLib.Models
             get => _name;
             set
             {
-                // "value" is the value passed to the setter.
-                if (value.Length == 0)
-                {
-                    // good practice to provide useful messages when throwing exceptions,
-                    // as well as the name of the relevant parameter if applicable.
-                    throw new FormatException("Name must not be empty.");
-                }
+                val.ValidateCustomerName(value);
                 _name = value;
             }
         }
-         public string ZipCode { get; set; }
 
-        public int password { get; set; }
+        public string Phone
+        {
+            // expression-body syntax for accessing the backing field.
+            // equivalent to "get { return phone; }"
+            get => _phone;
+            set
+            {
+               val.ValidateCustomerPhone(value);
+                _phone = value;
+            }
+        }
+
     }
 }

@@ -1,5 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Security;
+using System.Xml.Serialization;
+//using NLog;
+using CupCakeData;
+using CupCakeLib; 
 
 namespace CupCakeShop
 {  
