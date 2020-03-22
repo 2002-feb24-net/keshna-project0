@@ -1,12 +1,51 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CupCakeShop
-{
-    class Program
+{  
+        
+    // My First Page.
+    
+    internal class Program
     {
-        static void Main(string[] args)
+
+       
+        // Entry point to the console application.
+       
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("\n~~~~ Welcome to the CupCake ~~~~\n");
+                    Console.WriteLine("Are you a customer (c) or manager (m)?\n");
+                    string level = Console.ReadLine();
+                    if (level == "c")
+                    {
+                        Menu.DisplayCMenu();
+                        InputReader req = Menu.PromptUser();
+                        ShowMenu.HandleRequest(req);
+                    }
+                    else if(level == "m")
+                    {
+
+                        Menu.DisplayMMenu();
+                        InputReader req = Menu.PromptUser();
+                        ShowMenu.HandleRequest(req);
+                    }
+
+                   
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"{ex.Message}\n");
+                   
+                }
+            }
         }
     }
-}
+      
+    }
+
+
