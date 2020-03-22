@@ -6,7 +6,7 @@ namespace CupCakeShop
      internal enum InputReader
     {
         PlaceOrder = 7,
-        AddCustomer = 1,
+        AddCustomer = 6,
         SearchCustomer = 0,
         DisplayDetailsOfOrder = 2,
         DisplayOrderHistoryOfLocation = 3,
