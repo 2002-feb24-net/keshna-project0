@@ -86,8 +86,21 @@ namespace CupCakeShop
 
         private static void HandleRequestSearchCustomer()
         {
-            throw new NotImplementedException();
-        }
+            using IRepo DataRepos = Dependencies.CreateDataRepo();
+            Console.WriteLine("Enter the name of the customer: ");
+
+            string Name = Console.ReadLine();
+
+            try
+            {
+                DataRepos.SearchCustomer(Name);
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine("No one by that name.", e);
+            }
+        
+    }
 
         private static void HandleRequestAddCustomer()
         {
@@ -115,16 +128,11 @@ namespace CupCakeShop
 
             Console.WriteLine("\nHow else can I help you today?\n");
 
-           Menu.DisplayCMenu();
-            InputReader req = Menu.PromptUser();
-            ShowMenu.HandleRequest(req);
-
+          
         }
 
         private static void HandleRequestPlaceOrder()
         {
-
-            throw new NotImplementedException();
         }
     }
 }

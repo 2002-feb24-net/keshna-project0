@@ -10,5 +10,7 @@ namespace CupCakeLib.Interface
     {
         void AddCustomer(Customers customer);
         void SaveChanges();
+
+        void SearchCustomer(String name);
     }
 }

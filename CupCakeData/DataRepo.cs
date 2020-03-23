@@ -81,5 +81,13 @@ namespace CupCakeData
             Context.SaveChanges();
             
         }
+        public void SearchCustomer(String name)
+        {
+
+            var Name = Context.Customer.FirstOrDefault(n => n.Cname == name);
+            Console.WriteLine("Found " + name + " at: ");
+            Console.WriteLine("ID: " + Name.Id + " Name: " + Name.Cname +  " Phone: " + Name.Phone);
+
+        }
     }
 }
