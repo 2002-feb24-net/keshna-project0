@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CupCake
+namespace CupCakeLib.Models
 {
     // optional. Dont think inventory is required
-    class Inventory
+    public class Inventory
     {
         public int InventoryId { get; set; }
         public int StoreId { get; set; }

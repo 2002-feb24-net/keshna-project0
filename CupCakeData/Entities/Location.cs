@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CupCakeData.Model
+namespace CupCakeData.Entities
 {
     public partial class Location
     {
         public Location()
         {
+            Inventory = new HashSet<Inventory>();
             Orders = new HashSet<Orders>();
-            Store = new HashSet<Store>();
         }
 
-        public int Id { get; set; }
-        public string Zipcode { get; set; }
+        public int LocationId { get; set; }
+        public string City { get; set; }
 
+        public virtual ICollection<Inventory> Inventory { get; set; }
         public virtual ICollection<Orders> Orders { get; set; }
-        public virtual ICollection<Store> Store { get; set; }
     }
 }

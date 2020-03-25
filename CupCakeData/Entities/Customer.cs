@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CupCakeData.Model
+namespace CupCakeData.Entities
 {
     public partial class Customer
     {
@@ -10,9 +10,9 @@ namespace CupCakeData.Model
             Orders = new HashSet<Orders>();
         }
 
-        public int Id { get; set; }
-        public string Cname { get; set; }
-        public string Phone { get; set; }
+        public int CustomerId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         public virtual ICollection<Orders> Orders { get; set; }
     }
