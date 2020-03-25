@@ -1,26 +1,28 @@
 ﻿using CupCakeData.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace CupCakeData
 {
-   
+     /// <summary>
+    /// A repository managing data access for Customer,Location and Order objects 
+    /// using Entity Framework.
+    /// </summary>
+    /// <remarks>
+    /// This class ought to have better exception handling and logging.
+    /// </remarks>
         public class OrdersByLocationDB
         {
             public void GetOrdersByLocationDB(int locationID)
             {
-            //string connectionString = SecretConfiguration.ConnectionString;
+                 DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>()
+                         .UseSqlServer(secret.ConnectionString).Options;
+                 var context = new CupCakeShopContext(options);
+                 var context2 = new CupCakeShopContext(options);
+                 var context3 = new CupCakeShopContext(options);
 
-            DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>()
-         .UseSqlServer(secret.ConnectionString).Options;
-             var context = new CupCakeShopContext(options);
-            var context2 = new CupCakeShopContext(options);
-            var context3 = new CupCakeShopContext(options);
-
-            int count = 0;
+                int count = 0;
 
                 foreach (Orders order in context.Orders)
                 {

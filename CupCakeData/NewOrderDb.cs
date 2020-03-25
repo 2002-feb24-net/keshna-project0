@@ -2,13 +2,17 @@
 using CupCakeData.Entities;
 using Microsoft.EntityFrameworkCore;
 
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-
-namespace CupCakeData
+                                                       
+namespace CupCakeData                                               // adding an order
 {
+      /// <summary>
+    /// A repository managing data access for Orders objects 
+    /// using Entity Framework.
+    /// </summary>
+    /// <remarks>
+    /// This class ought to have better exception handling and logging.
+    /// </remarks>
     public class NewOrderDB
     {
         public void PlaceNewOrderDB(int customerId, int cupId, int cupLocationId, int cupQuantId, decimal orderTotal)

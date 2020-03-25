@@ -6,18 +6,23 @@ using System.Linq;
 
 namespace CupCakeData
 {
+     /// <summary>
+    /// A repository managing data access for Customer,Location and Order objects 
+    /// using Entity Framework.
+    /// </summary>
+    /// <remarks>
+    /// This class ought to have better exception handling and logging.
+    /// </remarks>
     public class OrdersByCustomerDB
     {
         public void GetOrdersByCustomerDB(int customerID)
         {
-            //string connectionString = SecretConfiguration.ConnectionString;
-
+           
 
             DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>()
                 .UseSqlServer(secret.ConnectionString).Options;
              var context = new CupCakeShopContext(options);
-
-             var context2 = new CupCakeShopContext(options);
+             var context2 = new CupCakeShopContext(options);      //3 context for 1.Cust 2.Prod 3.Loctn
              var context3 = new CupCakeShopContext(options);
 
             foreach (Orders order in context.Orders)

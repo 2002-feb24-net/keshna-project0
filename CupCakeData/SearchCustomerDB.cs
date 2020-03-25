@@ -1,19 +1,22 @@
 ﻿using CupCakeData.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
 
 namespace CupCakeData
 {
+     /// <summary>
+    /// A repository managing data access for Customer
+    /// using Entity Framework.
+    /// </summary>
+    /// <remarks>
+    /// This class ought to have better exception handling and logging.
+    /// </remarks>
     public class SearchCustomerDB
     {
         public void SearchForCustomerDB(string firstName, string lastName)
         {
-            // string connectionString = SecretConfiguration.ConnectionString;
-
-
             DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>()
                 .UseSqlServer(secret.ConnectionString).Options;
            var context = new CupCakeShopContext(options);
@@ -23,7 +26,7 @@ namespace CupCakeData
 
             if (foundName is null)
             {
-                Console.WriteLine("No Record Found");
+                Console.WriteLine("No Record Found");       //validation
                 return;
             }
             Console.WriteLine("----------------------------------------------");
