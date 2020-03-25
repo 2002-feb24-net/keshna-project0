@@ -1,11 +1,16 @@
 ﻿using CupCakeData.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CupCakeData
 {
+    /// <summary>
+    /// A repository managing data access for Location objects
+    /// using Entity Framework.
+    /// </summary>
+    /// <remarks>
+    /// This class ought to have better exception handling and logging.
+    /// </remarks>
     public class AllLocationsDB
     {
         public void GetAllLocationsDB()
@@ -16,7 +21,7 @@ namespace CupCakeData
                 .UseSqlServer(secret.ConnectionString).Options;
              var context = new CupCakeShopContext(options);
 
-            foreach (Location location in context.Location)
+            foreach (Location location in context.Location)     //Just display all
             {
                 
                 Console.WriteLine("----------------------------------------------");

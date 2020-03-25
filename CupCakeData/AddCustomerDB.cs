@@ -7,7 +7,7 @@ using CupCakeData.Entities;
 namespace CupCakeData
 {
     /// <summary>
-    /// A repository managing data access for restaurant objects and their review members,
+    /// A repository managing data access for Customer objects a
     /// using Entity Framework.
     /// </summary>
     /// <remarks>
@@ -18,8 +18,6 @@ namespace CupCakeData
     {
         public void AddNewCustomerDB()
         {
-            //string connectionString = SecretConfiguration.ConnectionString;
-
             DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>()
                 .UseSqlServer(secret.ConnectionString).Options;
             var context = new CupCakeShopContext(options);
@@ -37,11 +35,11 @@ namespace CupCakeData
 
                 string[] fullName = customerName.Split(' ');
 
-                if (fullName[0].ToLower() == "1")
+                if (fullName[0].ToLower() == "1")           //main menu
                 {
                     return;
                 }
-                else if (string.IsNullOrEmpty(customerName) || fullName.Length != 2)
+                else if (string.IsNullOrEmpty(customerName) || fullName.Length != 2)    //validation
                 {
                     Console.WriteLine("Invalid Name\n");
                     Console.WriteLine("Press a key to continue.");
@@ -49,7 +47,7 @@ namespace CupCakeData
                 }
                 else
                 {
-                    newCustomer.FirstName = fullName[0];
+                    newCustomer.FirstName = fullName[0];            //add
                     newCustomer.LastName = fullName[1];
                     break;
                 }
@@ -62,7 +60,7 @@ namespace CupCakeData
             Console.Clear();
             Console.WriteLine("Cup Cake Shop\n");
 
-            Console.WriteLine($"{newCustomer.FirstName} {newCustomer.LastName} added to the system.\n");
+            Console.WriteLine($"{newCustomer.FirstName} {newCustomer.LastName} added to the system.\n");   //show output
             Console.WriteLine("Press a key to continue: ");
             Console.ReadKey();
         }

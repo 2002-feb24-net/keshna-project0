@@ -27,9 +27,9 @@ namespace CupCakeData
 
                 if (order.CustomerId == customerID)
                 {
-                    Console.WriteLine("---------------------------------------------------------------------");
-                    Console.WriteLine($"| CustomerId: {order.CustomerId} | Location: {location.City} | ProductName: {product.Pname} | Quantity: {order.Quantity} |");
-                    Console.WriteLine("---------------------------------------------------------------------");
+                    Console.WriteLine("-------------------------------------------------------------------------------------------------------");
+                    Console.WriteLine($"| CustomerId: {order.CustomerId} | Location: {location.City} | ProductName: {product.Pname} | Quantity: {order.Quantity} | Date: {order.OrderTime} |" );
+                    Console.WriteLine("-------------------------------------------------------------------------------------------------------");
                 }
             }
         }

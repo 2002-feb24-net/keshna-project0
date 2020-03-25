@@ -30,9 +30,9 @@ namespace CupCakeData
                     if (order.LocationId == locationID)
                     {
                         count++;
-                        Console.WriteLine("---------------------------------------------------------------------");
-                        Console.WriteLine($"| LocationID: {order.LocationId} | Location: {location.City} | Product: {product.Pname} | Quantity: {order.Quantity} |");
-                        Console.WriteLine("---------------------------------------------------------------------");
+                        Console.WriteLine("------------------------------------------------------------------------------------------");
+                        Console.WriteLine($"| LocationID: {order.LocationId} | Location: {location.City} | Product: {product.Pname} | Quantity: {order.Quantity} | Date: {order.OrderTime} |");
+                        Console.WriteLine("------------------------------------------------------------------------------------------");
                         Console.WriteLine("\nPress a key to continue");
                         Console.ReadKey();
                     }

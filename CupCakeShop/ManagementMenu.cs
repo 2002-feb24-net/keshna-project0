@@ -1,16 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using CupCakeData;
-using CupCakeData.Entities;
-using CupCakeLib;
-using CupCakeLib.Models;
+
 
 namespace CupCakeShop
 {
     public class ManagementMenu
     {
-        public void OpenManagementMenu()
+        public void OpenManagementMenu()               //manager
         {
             while (true)
             {
@@ -28,26 +23,26 @@ namespace CupCakeShop
                 switch (menuChoice)
                 {
                     case "1":
-                        //View Orders by Customer
+                                                                                 //View Orders by Customer
                         var allOrders = new AllOrdersByCustomer();
                         allOrders.GetAllOrdersbyCustomer();
                         break;
 
                     case "2":
-                        //View Orders by Location
+                                                                                //View Orders by Location
                         var allOrdersByLocation = new AllOrdersByLocation();
                         allOrdersByLocation.GetOrdersByLocation();
                         break;
 
                     case "3":
-                        //Search for Customer by Name
+                                                                               //Search for Customer by Name
                         CustomerSearch customerSearch = new CustomerSearch();
                         customerSearch.SearchCustomers();
                         break;
 
 
                     case "4":
-                        //Return to Main Menu
+                                                                               //Return to Main Menu
                         MainMenu mainMenu = new MainMenu();
                         mainMenu.OpenMainMenu();
                         break;

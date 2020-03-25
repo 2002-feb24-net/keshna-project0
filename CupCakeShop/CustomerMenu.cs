@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using CupCakeData;
 
 namespace CupCakeShop
@@ -23,16 +22,16 @@ namespace CupCakeShop
                 switch (menuChoice)
                 {
                     case "1":
-                        AddCustomerDB addCustomerDB = new AddCustomerDB();
+                        AddCustomerDB addCustomerDB = new AddCustomerDB();            //add a customer
                         addCustomerDB.AddNewCustomerDB();
                         break;
 
                     case "2":
-                        RegularCustomerMenu();
+                        RegularCustomerMenu();                                    // certified customer
                         break;
 
                     case "3":
-                        MainMenu mainMenu = new MainMenu();
+                        MainMenu mainMenu = new MainMenu();                      //main menu
                         mainMenu.OpenMainMenu();
                         break;
 
@@ -43,7 +42,7 @@ namespace CupCakeShop
                         break;
                 }
 
-                void RegularCustomerMenu()
+                void RegularCustomerMenu()                            //certified customer
                 {
                     Console.Clear();
                     Console.WriteLine("Cup Cake Shop\n");
@@ -58,17 +57,17 @@ namespace CupCakeShop
                     switch (menuChoice)
                     {
                         case "1":
-                            NewOrder newOrder = new NewOrder();
+                            NewOrder newOrder = new NewOrder();              //place an order 
                             newOrder.PlaceNewOrder();
                             break;
 
                         case "2":
-                            var orderHistory = new AllOrdersByCustomer();
+                            var orderHistory = new AllOrdersByCustomer();    //see all orders
                             orderHistory.GetAllOrdersbyCustomer();
                             break;
 
                         case "3":
-                            MainMenu mainMenu = new MainMenu();
+                            MainMenu mainMenu = new MainMenu();              //main menu
                             mainMenu.OpenMainMenu();
                             break;
 

@@ -1,11 +1,12 @@
-﻿using System;
+﻿
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+
 
 namespace CupCakeData.Entities
 {
     public partial class CupCakeShopContext : DbContext
     {
+        //do not touch this file, unless you re-scaff
         public CupCakeShopContext()
         {
         }

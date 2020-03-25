@@ -17,7 +17,7 @@ namespace CupCakeData
             DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>()
              .UseSqlServer(secret.ConnectionString).Options;
             var context = new CupCakeShopContext(options);
-            DateTime dateTime = new DateTime(2020, 03, 24);
+         
 
             Orders newOrder = new Orders();
 
@@ -26,7 +26,8 @@ namespace CupCakeData
             newOrder.LocationId = cupLocationId;
             newOrder.Quantity = cupQuantId;
             newOrder.OrderTotal = orderTotal;
-            newOrder.OrderTime = dateTime;
+            DateTime now = DateTime.Now;
+            newOrder.OrderTime = now;
 
             context.Orders.Add(newOrder);
 
