@@ -46,7 +46,7 @@ namespace CupCakeShop
             }
 
             Console.Clear();
-            Console.WriteLine("Cup Cake Shop\n");
+         
 
             var allProducts = new AllProducts();
             allProducts.GetAllProducts();
@@ -55,7 +55,7 @@ namespace CupCakeShop
             int cupId = Int32.Parse(Console.ReadLine());
 
             Console.Clear();
-            Console.WriteLine("Cup Cake Shop\n");
+          
 
             var allLocations = new AllLocations();
             allLocations.GetAllLocations();
