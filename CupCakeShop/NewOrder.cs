@@ -40,7 +40,7 @@ namespace CupCakeShop
             }
             else
             {
-                Console.WriteLine($"\n[CustomerId] {customerId}");
+                Console.WriteLine($"\nYour CustomerId is: {customerId}");
                 Console.WriteLine("\nPress a key to continue Order");
                 Console.ReadKey();
             }
@@ -78,7 +78,7 @@ namespace CupCakeShop
 
             Console.Clear();
             Console.WriteLine("Cup Cake Shop\n");
-            Console.WriteLine("Order Placed. Your total bill for "+ cupQuantity +" is :" + orderTotal  );
+            Console.WriteLine("Order Placed. Your total bill for "+ cupQuantity +" item(s) is : " + orderTotal + " $"  );
             Console.WriteLine("\nPress a key to continue");
             Console.ReadKey();
         }

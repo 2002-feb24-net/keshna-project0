@@ -23,9 +23,9 @@ namespace CupCakeData
             foreach (Product product in context.Product)                     //display all
             {
                 
-                Console.WriteLine("-----------------------------------");
-                Console.WriteLine($"| ProductId: {product.ProductId} | ProductName: {product.Pname} |");
-                Console.WriteLine("-----------------------------------");
+                Console.WriteLine("--------------------------------------------");
+                Console.WriteLine($"| ProductId: {product.ProductId} | ProductName: {product.Pname} | Price  {product.Price} $");
+                Console.WriteLine("-------------------------------------------");
             }
         }
     }

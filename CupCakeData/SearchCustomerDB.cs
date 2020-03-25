@@ -29,9 +29,9 @@ namespace CupCakeData
                 Console.WriteLine("No Record Found");       //validation
                 return;
             }
-            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("-------------------------------------------");
             Console.WriteLine($"\n| CustomerId: {foundName.CustomerId} | CustomerName: {foundName.FirstName} {foundName.LastName} |");
-            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("-------------------------------------------");
         }
     }
 }
