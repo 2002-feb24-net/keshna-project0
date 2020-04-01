@@ -15,8 +15,10 @@ namespace CupCakeData
         public class OrdersByLocationDB
         {
             public void GetOrdersByLocationDB(int locationID)
-            {                                                                                                            //IDK what secret i but i will leave it alone
-                 DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>().UseSqlServer(secret.ConnectionString).Options;
+            {
+
+                 DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>()
+                         .UseSqlServer(secret.ConnectionString).Options;
                  var context = new CupCakeShopContext(options);
                  var context2 = new CupCakeShopContext(options);
                  var context3 = new CupCakeShopContext(options);
@@ -30,18 +32,17 @@ namespace CupCakeData
 
                     if (order.LocationId == locationID)
                     {
-                        
                         Console.WriteLine("------------------------------------------------------------------------------------------");
                         Console.WriteLine($"| LocationID: {order.LocationId} | Location: {location.City} | Product: {product.Pname} | Quantity: {order.Quantity} | Date: {order.OrderTime} |");
                         Console.WriteLine("------------------------------------------------------------------------------------------");
-                        Console.WriteLine("\nPress a key to continue");
-                        Console.ReadKey();
+                    
                     }
+                     else
+                      {
+                          Console.WriteLine("--No data--");
+                      }
                 }
-                
-                
-                    Console.WriteLine("\nNo Orders at this Location");
-                    Console.WriteLine("\nPress a key to continue");
+                  Console.WriteLine("\nPress a key to continue");
                     Console.ReadKey();
                 
             }
