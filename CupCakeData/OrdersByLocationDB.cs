@@ -15,14 +15,13 @@ namespace CupCakeData
         public class OrdersByLocationDB
         {
             public void GetOrdersByLocationDB(int locationID)
-            {
-                 DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>()
-                         .UseSqlServer(secret.ConnectionString).Options;
+            {                                                                                                            //IDK what secret i but i will leave it alone
+                 DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>().UseSqlServer(secret.ConnectionString).Options;
                  var context = new CupCakeShopContext(options);
                  var context2 = new CupCakeShopContext(options);
                  var context3 = new CupCakeShopContext(options);
 
-                int count = 0;
+                //Deleted the Counter Place Holder in your Cart
 
                 foreach (Orders order in context.Orders)
                 {
@@ -31,7 +30,7 @@ namespace CupCakeData
 
                     if (order.LocationId == locationID)
                     {
-                        count++;
+                        
                         Console.WriteLine("------------------------------------------------------------------------------------------");
                         Console.WriteLine($"| LocationID: {order.LocationId} | Location: {location.City} | Product: {product.Pname} | Quantity: {order.Quantity} | Date: {order.OrderTime} |");
                         Console.WriteLine("------------------------------------------------------------------------------------------");
@@ -39,12 +38,12 @@ namespace CupCakeData
                         Console.ReadKey();
                     }
                 }
-                if (count == 0)
-                {
+                
+                
                     Console.WriteLine("\nNo Orders at this Location");
                     Console.WriteLine("\nPress a key to continue");
                     Console.ReadKey();
-                }
+                
             }
         }
     
