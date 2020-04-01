@@ -23,7 +23,7 @@ namespace CupCakeData
                  var context2 = new CupCakeShopContext(options);
                  var context3 = new CupCakeShopContext(options);
 
-                int count = 0;
+                //Deleted the Counter Place Holder in your Cart
 
                 foreach (Orders order in context.Orders)
                 {
@@ -37,16 +37,14 @@ namespace CupCakeData
                         Console.WriteLine("------------------------------------------------------------------------------------------");
                     
                     }
-                else
-                {
-                    Console.WriteLine("--No data--");
+                     else
+                      {
+                          Console.WriteLine("--No data--");
+                      }
                 }
-            }
-                if (count == 0)
-                {
-                    Console.WriteLine("\nPress a key to continue");
+                  Console.WriteLine("\nPress a key to continue");
                     Console.ReadKey();
-                }
+                
             }
         }
     
