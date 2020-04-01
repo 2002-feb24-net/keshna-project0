@@ -16,6 +16,7 @@ namespace CupCakeData
         {
             public void GetOrdersByLocationDB(int locationID)
             {
+
                  DbContextOptions<CupCakeShopContext> options = new DbContextOptionsBuilder<CupCakeShopContext>()
                          .UseSqlServer(secret.ConnectionString).Options;
                  var context = new CupCakeShopContext(options);
@@ -31,17 +32,18 @@ namespace CupCakeData
 
                     if (order.LocationId == locationID)
                     {
-                        count++;
                         Console.WriteLine("------------------------------------------------------------------------------------------");
                         Console.WriteLine($"| LocationID: {order.LocationId} | Location: {location.City} | Product: {product.Pname} | Quantity: {order.Quantity} | Date: {order.OrderTime} |");
                         Console.WriteLine("------------------------------------------------------------------------------------------");
-                        Console.WriteLine("\nPress a key to continue");
-                        Console.ReadKey();
+                    
                     }
+                else
+                {
+                    Console.WriteLine("--No data--");
                 }
+            }
                 if (count == 0)
                 {
-                    Console.WriteLine("\nNo Orders at this Location");
                     Console.WriteLine("\nPress a key to continue");
                     Console.ReadKey();
                 }
